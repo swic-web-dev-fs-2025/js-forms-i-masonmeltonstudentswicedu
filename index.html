@@ -4,25 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla DOM</title>
+    <title>Registration Form</title>
   </head>
-  <body class="bg-slate-100">
-    <main class="mx-auto mt-10 max-w-xl">
-      <h1 class="mb-4 text-2xl font-bold text-center">Contact Form Practice</h1>
 
-      <form class="mx-auto max-w-md space-y-4 rounded border bg-white p-4">
+  <!-- Light gray background for clean UI -->
+  <body class="bg-slate-100 min-h-screen flex items-center justify-center">
+    <main class="w-full max-w-md">
+      <form class="space-y-4 rounded border bg-white p-6 shadow">
+        <h1 class="text-2xl font-bold text-center">Register</h1>
+
+        <!-- USERNAME -->
         <div>
-          <label class="mb-1 block text-sm font-medium" for="name">Name</label>
+          <label for="username" class="mb-1 block text-sm font-medium">
+            Username
+          </label>
           <input
-            id="name"
-            name="name"
+            id="username"
+            name="username"
+            type="text"
             required
             class="w-full rounded border px-3 py-2"
           />
         </div>
 
+        <!-- EMAIL -->
         <div>
-          <label class="mb-1 block text-sm font-medium" for="email">
+          <label for="email" class="mb-1 block text-sm font-medium">
             Email
           </label>
           <input
@@ -34,30 +41,48 @@
           />
         </div>
 
+        <!-- PASSWORD -->
         <div>
-          <label class="mb-1 block text-sm font-medium" for="message">
-            Message
+          <label for="password" class="mb-1 block text-sm font-medium">
+            Password
           </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
+          <input
+            id="password"
+            name="password"
+            type="password"
             required
             class="w-full rounded border px-3 py-2"
-          ></textarea>
+          />
         </div>
 
+        <!-- CONFIRM PASSWORD -->
+        <div>
+          <label for="confirmPassword" class="mb-1 block text-sm font-medium">
+            Confirm Password
+          </label>
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            required
+            class="w-full rounded border px-3 py-2"
+          />
+        </div>
+
+        <!-- ERROR OUTPUT (password mismatch) -->
+        <output class="block text-sm text-red-500 italic"></output>
+
+        <!-- SUBMIT BUTTON -->
         <button
-          class="rounded bg-blue-600 px-4 py-2 text-white disabled:bg-gray-400"
           type="submit"
+          class="w-full rounded bg-blue-600 px-4 py-2 text-white disabled:bg-gray-400"
         >
-          Submit
+          Create Account
         </button>
       </form>
-
-      <section id="result" class="mt-6"></section>
     </main>
 
-    <script type="module" src="/src/form-practice.js"></script>
+    <!-- Homework script connects to main.js -->
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
