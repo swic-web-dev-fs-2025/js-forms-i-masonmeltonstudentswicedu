@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
   </head>
-
-  <!-- Light gray background for clean UI -->
   <body class="bg-slate-100 min-h-screen flex items-center justify-center">
     <main class="w-full max-w-md">
       <form class="space-y-4 rounded border bg-white p-6 shadow">
         <h1 class="text-2xl font-bold text-center">Register</h1>
-
-        <!-- USERNAME -->
         <div>
           <label for="username" class="mb-1 block text-sm font-medium">
             Username
@@ -26,8 +22,6 @@
             class="w-full rounded border px-3 py-2"
           />
         </div>
-
-        <!-- EMAIL -->
         <div>
           <label for="email" class="mb-1 block text-sm font-medium">
             Email
@@ -40,8 +34,6 @@
             class="w-full rounded border px-3 py-2"
           />
         </div>
-
-        <!-- PASSWORD -->
         <div>
           <label for="password" class="mb-1 block text-sm font-medium">
             Password
@@ -54,8 +46,6 @@
             class="w-full rounded border px-3 py-2"
           />
         </div>
-
-        <!-- CONFIRM PASSWORD -->
         <div>
           <label for="confirmPassword" class="mb-1 block text-sm font-medium">
             Confirm Password
@@ -68,11 +58,7 @@
             class="w-full rounded border px-3 py-2"
           />
         </div>
-
-        <!-- ERROR OUTPUT (password mismatch) -->
         <output class="block text-sm text-red-500 italic"></output>
-
-        <!-- SUBMIT BUTTON -->
         <button
           type="submit"
           class="w-full rounded bg-blue-600 px-4 py-2 text-white disabled:bg-gray-400"
@@ -81,8 +67,6 @@
         </button>
       </form>
     </main>
-
-    <!-- Homework script connects to main.js -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
